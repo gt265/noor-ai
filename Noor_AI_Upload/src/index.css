@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-light: #e6f4ea;
+  --color-brand: #00603A;
+  --color-brand-dark: #004d2e;
+  --color-brand-accent: #10b981;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-brand-light dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300;
+}
